@@ -183,6 +183,9 @@ class _TestScreenState extends State<TestScreen> {
                 int.parse(searchAngkaController.text),
               );
             }
+            setState(() {
+              searchAngkaController.clear();
+            });
           },
           child: const Text("Submit Pencarian"),
         ),

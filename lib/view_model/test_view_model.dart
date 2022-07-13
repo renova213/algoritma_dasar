@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class TestViewModel extends ChangeNotifier {
   List<int> listInputAngka = [];
@@ -35,6 +36,10 @@ class TestViewModel extends ChangeNotifier {
       for (int i = 0; i < listInputAngka.length; i++) {
         if (listInputAngka[i] == value) {
           searchInputAngka.add(listInputAngka[i]);
+        } else {
+          Fluttertoast.showToast(
+              toastLength: Toast.LENGTH_SHORT,
+              msg: "Pencarian Tidak Ditemukan");
         }
       }
     }
